@@ -1,0 +1,10 @@
+{
+  "name": "my-first-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app running on Codespaces",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {}
+}
