@@ -1,10 +1,16 @@
 {
-  "name": "my-first-app",
+  "name": "base-summer-project",
   "version": "1.0.0",
-  "description": "A simple Node.js app running on Codespaces",
+  "description": "Repository latihan untuk kontribusi Web3, Base, dan Builder Score.# base-summer-project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {}
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.0"
+  }
 }
