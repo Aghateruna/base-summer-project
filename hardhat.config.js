@@ -1,11 +1,19 @@
-require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.24",
     networks: {
         base: {
-              url: "https://mainnet.base.org", // RPC URL untuk Base mainnet
-                    accounts: ["YOUR_PRIVATE_KEY"] // Tambahkan private key wallet Anda nanti
-                        }
-                          }
-                          };
+              url: process.env.BASE_RPC_URL || "https://mainnet.base.org",
+                    accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+                          chainId: 8453, // Base Mainnet
+                              },
+                                  baseTestnet: {
+                                        url: process.env.BASE_TESTNET_RPC_URL || "https://goerli.base.org",
+                                              accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+                                                    chainId: 84531, // Base Goerli
+                                                        },
+                                                          },
+                                                          };
